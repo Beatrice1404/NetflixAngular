@@ -1,0 +1,132 @@
+.container {
+    position: relative;
+    width: 100%;
+    max-height: 80vh;
+    overflow: hidden;
+  }
+  
+  .poster {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .title-container {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+  }
+  
+  .movie-title {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .containerDetails {
+    color:white;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 30px;
+    font-weight: bold;
+    display: flex;
+  }
+  
+  .genres{
+    color: white;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 30px;
+    font-weight: bold;
+  }
+
+  .overview { 
+    margin-top: 50px;
+    width:700px;
+  }
+
+  .movie-details{
+   margin-left: auto;
+   margin-right: 100px;
+  }
+
+  .series-details{
+    margin-left: auto;
+   margin-right: 100px;
+  }
+
+  .tagline{
+    color: white;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 30px;
+    font-weight: bold;
+  }
+
+  .image-list-container {
+    width: 100%; 
+    overflow-x: auto; 
+  }
+  
+  .image-list {
+    display: flex; 
+    gap: 10px; 
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+    width: fit-content; 
+    white-space: nowrap;
+  }
+  
+  .image-list img {
+    max-height: 150px; 
+    border: 1px solid #ccc; 
+  }
+  
+  .image-list-container {
+    width: 100%; 
+    overflow-x: auto; 
+  }
+  
+  .similar-list-container {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .similar-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .similar-list li {
+    width: 500px;
+    margin: 15px;
+  }
+  
+  .similar-list img {
+    margin-top: 20px;
+    width: 100%;
+    max-height: 300px;
+  }
+  
+  .movie-info {
+    background-color: rgba(45, 45, 45, 0.603);
+    border-radius: 20px;
+    width: auto;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    height: 550px;
+    justify-content: center;
+  }
+
+  .movie-title{
+    font-size: 30px;
+    margin-top: 50px;
+  }

@@ -1,0 +1,16 @@
+<div class="movie-posters">
+  <div class="movie-with-title" *ngFor="let media of list.slice(1); let i = index">
+    <img class="posters" src="https://image.tmdb.org/t/p/w500/{{ media.poster_path }}" alt="{{ media.title }}" (click)="goToDetails(media.id)">
+    <div class="movie-info">
+      <div class="movie-title">{{ media.media_type === 'movie' ? 'Title:' : 'Name:' }}
+        {{ media.media_type === 'movie' ? media.title : media.name }}</div>
+      <div class="movie-rating">Ratings: {{ media.vote_average }}</div>
+      <div class="movie-release-date">{{ media.media_type === 'movie' ? 'Release Date:' : 'First Air Date:' }}
+        {{ media.media_type === 'movie' ? media.release_date : media.first_air_date }}</div>
+      <div class="movie-language">Language: {{ media.original_language }}</div>
+    </div>
+  </div>
+</div>
+
+
+

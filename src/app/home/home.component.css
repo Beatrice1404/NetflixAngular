@@ -1,0 +1,82 @@
+.main-movie {
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+  object-fit: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.movie-posters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.first-poster {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.other-poster {
+  flex: 1 1 ;
+}
+
+.movie-posters .posters {
+  width: 200px;
+  height: 255px;
+  margin: 5px; 
+}
+
+
+.series {
+  display: inline-block;
+}
+
+.series img {
+  width: 200px;
+  height: 255px;
+  margin: 10px;
+}
+
+.movie-posters-container {
+  display: block;
+  text-align: center;
+  margin: 10px;
+  position: relative;
+}
+
+.movie-with-title {
+  width:100%;
+  max-height: 70vh;
+  overflow: hidden;
+}
+
+.movie-title {
+  position: absolute;
+  bottom: 10px; 
+  left: 10px;
+  color: #fff; 
+  padding: 5px 10px; 
+  font-size: 24px; 
+  font-weight: bold; 
+}
+
+.posters {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.type{
+    color: red;
+    font-size: 24px; 
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom:20px ;
+}

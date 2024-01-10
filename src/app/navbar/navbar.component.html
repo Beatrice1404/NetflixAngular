@@ -1,0 +1,16 @@
+<nav class="navbar">
+    <div class="navbar-content">
+        <a [routerLink]="'/'">
+        <div class="logo">
+            <img src="https://darkxmatters.files.wordpress.com/2018/06/434952-netflix-logo.png?w=560&h=315" alt="Netflix Logo" >
+        </div>
+        </a>
+        <div class="navbar-items">
+            <div [routerLink]="'/movies'">Movies</div>
+            <div [routerLink]="'/series'">Series</div>
+        </div>
+        <div class="navbar-search">
+            <input type="text" placeholder="Search...">
+        </div>
+    </div>
+</nav>

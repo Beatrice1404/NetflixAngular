@@ -1,0 +1,66 @@
+<div *ngIf="movie">
+  <div class="container">
+    <img
+      class="poster"
+      [src]="'https://image.tmdb.org/t/p/original/' + movie.backdrop_path"
+      alt="{{ movie.title }}"
+    />
+    <div class="title-container">
+      <div class="movie-title">
+        {{ movie.movie_type === "movie" ? "Title:" : movie.title }}
+        {{ movie.movie_type === "movie" ? movie.title : movie.name }}
+      </div>
+    </div>
+  </div>
+  <div class="tagline" *ngIf="isMovie">{{ movie.tagline }}</div>
+  <div class="containerDetails">
+    <div class="overview">{{ movie.overview }}</div>
+    <div class="movie-details" *ngIf="isMovie">
+      <p>Release Date: {{ movie.release_date }}</p>
+      <p>Runtime: {{ movie.runtime }} minutes</p>
+      <p>Budget: {{ movie.budget | number }} $</p>
+      <p>Revenue: {{ movie.revenue | number }} $</p>
+      <p>Average Vote: {{ movie.vote_average | number : "1.2-2" }}</p>
+    </div>
+    <div class="series-details" *ngIf="!isMovie">
+      <p>First air Date: {{ movie.first_air_date }}</p>
+      <p>Last air Date: {{ movie.last_air_date }}</p>
+      <p>Number of Seasons: {{ movie.number_of_seasons }}</p>
+      <p>Number of Episodes: {{ movie.number_of_episodes }}</p>
+      <p>Average Vote: {{ movie.vote_average }}</p>
+    </div>
+  </div>
+  <div class="genres">
+    Genres:
+    <ul>
+      <li *ngFor="let genre of movie.genres">{{ genre.name }}</li>
+    </ul>
+    <h2>Images:</h2>
+    <div class="image-list-container">
+      <ul class="image-list">
+        <li *ngFor="let image of images">
+          <img [src]="image" alt="Image {{ image.id }}" />
+        </li>
+      </ul>
+    </div>    
+    <h2>Similar :</h2>
+<div class="similar-list-container">
+  <ul class="similar-list">
+    <ng-container  *ngFor="let movie of similar">
+    <li *ngIf=" movie.backdrop_path" >
+      <div class="movie-info" (click)="goToDetails(movie)">
+      <img  [src]="'https://image.tmdb.org/t/p/w300/' + movie.backdrop_path"  />
+      <div class="movie-title">{{ movie.release_date ? 'Title:' : 'Name:' }}
+        {{ movie.release_date  ? movie.title : movie.name }}</div>
+        <div class="movie-rating">Ratings: {{ movie.vote_average }}</div>
+        <div class="movie-release-date">{{ movie.movie_type === 'movie' ? 'Release Date:' : 'First Air Date:' }}
+          {{ movie.movie_type === 'movie' ? movie.release_date : movie.first_air_date }}</div>
+        <div class="movie-language">Language: {{ movie.original_language }}</div>
+      </div>
+    </li>
+    </ng-container>
+  </ul>
+</div> 
+</div> 
+</div>
+

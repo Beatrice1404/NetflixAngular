@@ -1,0 +1,13 @@
+<div class="movie-posters-container">
+  <div class="main-movie" *ngIf="mainMovie?.backdrop_path">
+    <div class="movie-with-title">
+      <img class="posters" src="https://image.tmdb.org/t/p/original/{{ mainMovie.backdrop_path }}" alt="{{ mainMovie.title }}" (click)="goToMovieDetails(mainMovie.id)">
+      <div class="movie-title">{{ mainMovie.title }}</div>
+    </div>
+  </div>
+  <div class="type">MOVIES:</div>
+    <br>
+  <app-media-list [list]="movies" [areMovies]="true"></app-media-list>
+  <div class="series">TV SERIES:</div>
+  <app-media-list [list]="series" [areMovies]="false"></app-media-list>
+</div>
